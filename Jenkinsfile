@@ -10,7 +10,7 @@ pipeline {
         stage('Disk Space Before Cleanup') {
             steps {
                 echo '📊 Disk space BEFORE cleanup'
-                bat 'powershell -Command "Get-PSDrive C | Select-Object Used,Free,Name"'
+                bat 'fsutil volume diskfree C:'
             }
         }
 
@@ -25,7 +25,7 @@ pipeline {
         stage('Disk Space After Cleanup') {
             steps {
                 echo '📊 Disk space AFTER cleanup'
-                bat 'powershell -Command "Get-PSDrive C | Select-Object Used,Free,Name"'
+                bat 'fsutil volume diskfree C:'
             }
         }
     }
