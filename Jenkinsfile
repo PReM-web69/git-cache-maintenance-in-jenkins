@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/PReM-web69/git-cache-maintenance-in-jenkins'
+                git branch: 'main', url: 'https://github.com/PReM-web69/git-cache-maintenance-in-jenkins.git'
             }
         }
 
